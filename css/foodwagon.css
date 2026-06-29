@@ -66,10 +66,19 @@ header {
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  header {
+    height: auto; /* اتركه يتمدد */
+    position: fixed;
+    z-index: 1000;
+  }
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header .container a {
@@ -122,6 +131,14 @@ header .container span.b {
 
 header .container p i {
   color: var(--main-color);
+  display: none;
+  position: absolute; /* المهم هنا */
+  top: calc(100% + 50px); /* تحت الـ p شوية */
+  left: 0;
+  width: 100%;
+  background-color: #f9fafd;
+  padding: 10px;
+  z-index: 999;
 }
 @media (max-width: 1200px) {
   header .container p {
@@ -132,9 +149,6 @@ header .container p i {
   header .container p {
     width: 200px;
     margin-left: 20px;
-  }
-  header {
-    height: 88px;
   }
 }
 header .container .search-box {
