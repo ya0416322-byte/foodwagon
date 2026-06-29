@@ -132,8 +132,8 @@ header .container span.b {
 header .container p i {
   color: var(--main-color);
   display: none;
-  position: absolute; /* المهم هنا */
-  top: calc(100% + 50px); /* تحت الـ p شوية */
+  position: absolute;
+  top: calc(100% + 50px);
   left: 0;
   width: 100%;
   background-color: #f9fafd;
@@ -205,7 +205,7 @@ header .container button {
 }
 @media (max-width: 456px) {
   header .container .search-box input + i {
-    left: 50px;
+    left: 10px;
   }
 }
 /* End header */
