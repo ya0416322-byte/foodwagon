@@ -101,7 +101,7 @@ header .container a {
   }
 }
 header .container a + i {
-  font-size: 50px;
+  font-size: 30px;
 }
 header .container a img {
   width: 30px;
@@ -149,7 +149,6 @@ header .container p i {
   }
 }
 header .container .search-box {
-  position: relative;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -166,13 +165,19 @@ header .container .search-box input:focus {
   box-shadow: 0px 0px 5px 0.25rem rgb(255 179 14 / 25%);
   color: #424242;
 }
-header .container .search-box input + i {
+header .container .search-box .input {
+  position: relative;
+}
+header .container .search-box .input::before {
+  content: "\f002";
   position: absolute;
   top: 50%;
   left: 10px;
   font-size: 15px;
   color: var(--main-color);
   transform: translateY(-50%);
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
 }
 
 header .container button {
@@ -195,16 +200,10 @@ header .container button {
     display: none;
     margin-top: 15px;
     justify-content: center;
-  }
-  header .container .search-box input + i {
-    left: 10px;
+    margin-bottom: 15px;
   }
 }
-@media (max-width: 456px) {
-  header .container .search-box input + i {
-    left: 10px;
-  }
-}
+
 /* End header */
 .hero {
   background-color: var(--main-color);
@@ -1173,7 +1172,7 @@ footer .container .listes2 .follow p {
   color: #bdbdbd;
   line-height: 1.4;
 }
-footer .container .listes2 .follow input:first-of-type {
+footer .container .listes2 .follow .input input {
   padding: 10px 0px 10px 40px;
   border-radius: 15px;
   position: relative;
@@ -1183,25 +1182,31 @@ footer .container .listes2 .follow input:first-of-type {
   margin-right: 10px;
 }
 
-footer .container .listes2 .follow input:first-of-type:focus {
+footer .container .listes2 .follow .input {
+  position: relative;
+  display: inline-block;
+}
+footer .container .listes2 .follow .input::before {
+  content: "\f0e0";
+  position: absolute;
+  font-family: "Font Awesome 7 Free";
+  font-size: 20px;
+  color: rgb(189, 189, 189);
+  margin-right: 5px;
+  top: 3px;
+  font-weight: 900;
+  left: 12px;
+  z-index: 1;
+}
+footer .container .listes2 .follow .input input:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 179, 14, 0.25);
   box-shadow: 0px 0px 5px 0.25rem rgb(255 179 14 / 25%);
 }
-footer .container .listes2 .follow input:first-of-type::placeholder {
+footer .container .listes2 .follow .input input::placeholder {
   color: #fff;
 }
-footer .container .listes2 .follow .form {
-  position: relative;
-}
-footer .container .listes2 .follow p + i {
-  position: absolute;
-  color: rgb(189, 189, 189);
-  top: 116px;
-  z-index: 1;
-  left: 10px;
-  font-size: 20px;
-}
-footer .container .listes2 .follow input:last-of-type {
+
+footer .container .listes2 .follow .sub {
   padding: 10px;
   border-radius: 15px;
   width: 100px;
@@ -1223,46 +1228,8 @@ footer .container .footer i {
   color: var(--main-color);
 }
 @media (max-width: 1400px) {
-  footer .container .listes2 .follow p + i {
-    top: 155px;
-  }
-  footer .container .listes2 .follow input:first-of-type {
+  footer .container .listes2 .follow .input input {
     margin-bottom: 10px;
-  }
-}
-@media (max-width: 727px) {
-  footer .container .listes2 .follow p + i {
-    top: 194px;
-  }
-}
-@media (max-width: 670px) {
-  footer .container .listes2 .follow p + i {
-    top: 118px;
-  }
-}
-@media (max-width: 579px) {
-  footer .container .listes2 .follow p + i {
-    top: 154px;
-  }
-}
-@media (min-width: 670px) and (max-width: 684px) {
-  footer .container .listes2 .follow p + i {
-    top: 118px;
-  }
-}
-@media (min-width: 580px) and (max-width: 593px) {
-  footer .container .listes2 .follow p + i {
-    top: 155px;
-  }
-}
-@media (min-width: 465px) and (max-width: 506px) {
-  footer .container .listes2 .follow p + i {
-    top: 192px;
-  }
-}
-@media (min-width: 374px) and (max-width: 464px) {
-  footer .container .listes2 .follow p + i {
-    top: 117px;
   }
 }
 
