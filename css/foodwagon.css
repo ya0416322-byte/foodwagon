@@ -68,9 +68,6 @@ header {
 
 @media (max-width: 768px) {
   header {
-    height: auto; /* اتركه يتمدد */
-    position: fixed;
-    z-index: 1000;
   }
 }
 
@@ -234,6 +231,18 @@ header .container button {
   color: #f9fafd;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .hero .container .content h1:first-child {
+    font-size: 60px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .hero .container .content h1:first-child {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+}
 .hero .container .content h1:last-of-type {
   font-size: 33.1776px;
   color: #616161;
@@ -271,7 +280,7 @@ header .container button {
     top: 45% !important;
   }
   .hero .container .image img {
-    width: 65% !important;
+    display: none;
   }
 }
 .hero .container .content .form button:first-child {
@@ -348,7 +357,7 @@ header .container button {
 
 @media (max-width: 992px) {
   .some-offer .container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
 }
@@ -1102,6 +1111,12 @@ header .container button {
 .last-section .container a:hover {
   filter: brightness(90%);
 }
+
+@media (min-width: 300px) and (max-width: 704px) {
+  .last-section .container a {
+    width: 50%;
+  }
+}
 /* end the last section */
 /* start footer */
 footer {
@@ -1230,4 +1245,25 @@ footer .container .footer i {
     top: 154px;
   }
 }
+@media (min-width: 670px) and (max-width: 684px) {
+  footer .container .listes2 .follow p + i {
+    top: 118px;
+  }
+}
+@media (min-width: 580px) and (max-width: 593px) {
+  footer .container .listes2 .follow p + i {
+    top: 155px;
+  }
+}
+@media (min-width: 465px) and (max-width: 506px) {
+  footer .container .listes2 .follow p + i {
+    top: 192px;
+  }
+}
+@media (min-width: 374px) and (max-width: 464px) {
+  footer .container .listes2 .follow p + i {
+    top: 117px;
+  }
+}
+
 /* end footer */
